@@ -35,7 +35,7 @@
       //if
       var refValue = 80; //基準値
       var score; //点数
-      score = prompt("点数を入力してください",80);
+      //score = prompt("点数を入力してください",80);
       if (score == 100) {
         document.write("<h1>百点満点</h1>")
       }
@@ -46,6 +46,45 @@
         document.write("<h1>不合格です</h1>")
         document.write("<p>もう少し頑張りましょう</p>")
       }
+      
+      var month;
+      //month = prompt("月を入力してください",1)
+      if ((month == 12) || (month == 1) || (month == 2)) { //12もしくは1もしくは2 ==はもしくは
+        document.write("<h1>冬</h1>");
+      }else if ((month >= 3)&&(month <= 5)){  //3より大きいか等しいかつ5より小さいか等しい &&はかつ
+        document.write("<h1>春</h1>");
+      }else if ((month>= 6 ) && (month<= 8)){
+        document.write("<h1>夏</h1>");
+      }else if ((month>= 9) &&(month<= 11)){
+        document.write("<h1>秋</h1>");
+      } else {
+        document.write("<h1>1から12の値を入力してください");
+      }
+    </script>
+    <script>
+    var month;
+        month = prompt("月を入力してください",1)
+        month = Number(month);
+        switch (month) {
+          case 12:
+          case 1:
+          case 2:
+            document.write("<h1>冬</h1>")
+            break;
+          case 3:
+          case 4:
+          case 5:
+            document.write("<h1>春</h1>")
+          case 6:
+          case 7:
+          case 8:
+            document.write("<h1>夏</h1>")
+          case 9:
+          case 10:
+          case 11:
+            document.write("<h1>秋</h1>")
+            break;
+        }
     </script>
     
   </body>
