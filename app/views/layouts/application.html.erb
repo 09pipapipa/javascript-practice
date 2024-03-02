@@ -36,9 +36,15 @@
       var refValue = 80; //基準値
       var score; //点数
       score = prompt("点数を入力してください",80);
+      if (score == 100) {
+        document.write("<h1>百点満点</h1>")
+      }
       if (score >= refValue) {
         document.write("<h1>合格です</h1>");
         document.write("<p>がんばりました</p>");
+      }else{
+        document.write("<h1>不合格です</h1>")
+        document.write("<p>もう少し頑張りましょう</p>")
       }
     </script>
     
