@@ -1,1 +1,3 @@
-console.log ("js読み込みの準備")
+alert("ようこそ")
+alert(4+5)
+alert(5-2);
