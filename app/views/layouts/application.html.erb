@@ -10,9 +10,30 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
     <%= javascript_importmap_tags %>
+
   </head>
 
   <body>
+    <script>
+                         //仮引数
+      function dollToYen(doll,rate) {
+        var yen;
+        yen = doll * rate;
+        //return yen;  //return文で計算した値を実引数に返す
+      }
+    </script>
+  <p style="font-size:200% "> 
+    <script>
+                            //実引数
+        var yenl = dollToYen(100,90);
+        document.write(yenl, "円<br>");
+
+        var doll2 = 50;
+        var rate2 = 88;
+        var yen2 = dollToYen(doll2, rate2);
+        document.write(yen2, "円<br>")
+    </script>
+  </p>
     <%= yield %>
   </body>
 </html>
