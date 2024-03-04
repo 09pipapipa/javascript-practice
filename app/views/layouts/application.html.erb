@@ -15,11 +15,12 @@
 
   <body>
     <script>
+      //function return
                          //仮引数
       function dollToYen(doll,rate) {
         var yen;
         yen = doll * rate;
-        //return yen;  //return文で計算した値を実引数に返す
+        return yen;  //return文で計算した値を実引数に返す
       }
     </script>
   <p style="font-size:200% "> 
@@ -32,6 +33,20 @@
         var rate2 = 88;
         var yen2 = dollToYen(doll2, rate2);
         document.write(yen2, "円<br>")
+    </script>
+
+    <script>
+    //ローカル変数
+      function testFunc() {
+        var num;
+        num = 5;
+      }
+    </script>
+    <script>
+    //グローバル変数
+      var num = 3;
+      testFunc();
+      document.write(num, "<br>");
     </script>
   </p>
     <%= yield %>
