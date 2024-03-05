@@ -56,6 +56,7 @@
     }
   </script>
   <script>
+    //stringオブジェクト
     var str1 = new String("Stringオブジェクト")
     document.write("<h1>", str1, "</h1>")
     document.write("<h2>長さ:", str1.length, "</h2>")
@@ -64,6 +65,23 @@
     for (var i = 0; i <= (str2.length - 1); i++) {
         document.write("<h2>", str2.charAt(i), "</h2>");
     }
+  </script>
+  <script type="text/javascript">
+    //link url設定
+    var title1 = "ページの先頭"
+    var anchor1 = title1.anchor("pTop")
+    document.write("<h1>", anchor1, "</h1>")
+
+    var url = "http://google.co.jp"
+    var text = "Google".link(url) + "で検索"
+    document.write("<h1>", text, "</h1>")
+    //ページの先頭へ行くリンク
+    for (i =0; i < 10; i++) {
+      document.write("<h2>hello</h2>");
+    }
+
+    var toAnchor1 = "ページのトップへ".link("#pTop");
+    document.write("<h2>",toAnchor1, "</h2>")
   </script>
     <%= yield %>
   </body>
