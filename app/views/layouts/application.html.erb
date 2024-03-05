@@ -14,6 +14,7 @@
 
   <body>
   <script>
+  //日付・自国の変更メソッド
     var now;
     now  = new Date();
     document.write("<h1>",now.toString(),"</h1>");
@@ -36,6 +37,23 @@
     diff = gantan.getTime() - now.getTime();
     days = Math.ceil(diff / (24 * 60 * 60 * 1000));
     document.write("<h1>ことしの残り日数:", days, "</h1>");
+  </script>
+  <script>
+    //数学計算用メソッドMathオブジェクト
+    var num1 = 10;
+    var num2 = 15;
+    var num3 = 16;
+    document.write("<h1>", Math.max(num1, num2, num3), "</h1>")
+    document.write("<h1>", Math.min(num1, num2, num3), "</h1>")
+    //おみくじを作る
+    var random = Math.random();  //０以上１未満の乱数を生成
+    if (random < 0.33) {  
+      document.write("<h1>", "大吉", "</h1>")
+    } else if (random < 0.66) {
+      document.write("<h1>", "吉", "</h1>")
+    } else {
+      document.write("<h1>", "凶", "</h1>")
+    }
   </script>
     <%= yield %>
   </body>
