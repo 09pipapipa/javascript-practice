@@ -13,6 +13,17 @@
   </head>
 
   <body>
+  <script>
+    var now;
+    now  = new Date();
+    document.write("<h1>",now.toString(),"</h1>");
+  </script>
+  <script>
+    var aDay;
+    aDay = new Date(2017, 3, 10, 14, 1, 24);
+    document.write("<h1>", aDay.toString(),"</h1>");
+  </script>
+  
     <%= yield %>
   </body>
 </html>
