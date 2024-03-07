@@ -18,6 +18,7 @@
   <div id="output2"></div>
   
   <script>
+  //Array
     let names = new Array(4);
     names[0] = "山田";
     names[1] = "中山";
@@ -35,6 +36,17 @@
     }
   </script>
 
+  <script>
+  //大小を比較する関数の作成
+    function compare(a,b){
+      return a-b;
+    }
+  //配列の操作 Array
+    let ages = Array(4,6,10,24,1,11,40);
+  //配列の並び替え
+    ages = ages.sort(compare);
+    console.log(ages.join(">"));
+  </script>
 
     <%= yield %>
   </body>
