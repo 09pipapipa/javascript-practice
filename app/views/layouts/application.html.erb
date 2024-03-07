@@ -13,6 +13,26 @@
   </head>
 
   <body>
+
+  <div id="output1"></div>
+  <div id="output2"></div>
+  
+  <script>
+    let names = new Array(4);
+    names[0] = "山田";
+    names[1] = "中山";
+    names[2] = "井上";
+    names[3] = "江藤";
+    
+    let greeting1 = "<h2>こんにちは " + names[0] + " さん</h2>";
+    let greeting2 = "<h2>こんにちは " + names[1] + " さん</h2>";
+    
+    document.getElementById("output1").innerHTML = greeting1;
+    document.getElementById("output2").innerHTML = greeting2;
+
+  </script>
+
+
     <%= yield %>
   </body>
 </html>
