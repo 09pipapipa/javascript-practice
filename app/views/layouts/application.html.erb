@@ -47,6 +47,19 @@
     ages = ages.sort(compare);
     console.log(ages.join(">"));
   </script>
+  <script>
+  //連想配列の利用
+  let colors = new Object();
+  colors["white"] = "白"
+  colors["red"] = "赤"
+  colors["green"] = "緑"
+  colors["yellow"] = "黄"
+
+  for (let eigo in colors) {
+    console.log(eigo + "" + colors[eigo]);
+  }
+
+  </script>
 
     <%= yield %>
   </body>
