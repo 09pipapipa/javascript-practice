@@ -10,9 +10,26 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
     <%= javascript_importmap_tags %>
+    
   </head>
 
   <body>
+  <script>
+  //OSによってメッセージを変更する
+  /*
+    for (let prop in navigator) {
+      console.log(prop, "", navigator[prop])
+    }
+  */
+  let platform = navigator.platform;
+  if (platform.indexOf("Mac") >=0 ) {
+    console.log("こんにちはMacユーザーさん")
+  } else if(platform.indexOf("Win") >= 0) {
+    console.log("こんにちはWinのみなさん") 
+  } else {
+    console.log("その他のユーザーさん")
+  }
+  </script>
     <%= yield %>
   </body>
 </html>
