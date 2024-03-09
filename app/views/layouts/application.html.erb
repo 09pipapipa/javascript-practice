@@ -10,10 +10,26 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 
     <%= javascript_importmap_tags %>
-    
+    <script>
+    //イベントハンドラ
+      function funcl(srt){
+        alert(srt + "クリックされました")
+      }
+
+      function funcl() {
+        alert("ドキュメントがロードされました");
+      }
+      windoiw.onload = init;
+    </script>
   </head>
 
   <body>
+  <form id= "myForm" name= "myForm">
+    <p>
+      <input type="button" value="ボタン1"
+        name="button1" onclick="funcl('ボタン1');">
+    </p>
+  </form>
   <script>
   //OSによってメッセージを変更する
   /*
@@ -30,6 +46,7 @@
     console.log("その他のユーザーさん")
   }
   </script>
+
     <%= yield %>
   </body>
 </html>
