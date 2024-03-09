@@ -8,6 +8,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <script src="practice.js" defer></script>
 
     <%= javascript_importmap_tags %>
     <script>
@@ -74,8 +75,8 @@
     //新規のwindowsを開く。windowオブジェクト
       function openWin(){
         let win = window.open("http://google.co.jp", "",
-                              "resizable=yes, width=1000, height=500");
-                              
+                              "resizable=yes, width=1000, height=500,location=yes,status=yes");
+
       }
     </script>
 
@@ -83,5 +84,6 @@
       <input type="button" value="開く"
               name="openBtn" onclick="openWin()">
     </p></form>
+
   </body>
 </html>
