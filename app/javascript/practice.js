@@ -1,3 +1,4 @@
+//デジタル時計の作成
 let hourBox, minBox, secBox;
 let timer;
 
